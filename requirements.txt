@@ -1,5 +1,4 @@
 fastapi==0.111.0
 keras==3.4.1
-numpy==2.0.0
 Pillow==10.4.0
 tensorflow==2.17.0
