@@ -1,6 +1,6 @@
 FROM python:3.9.11
 
-COPY .. .
+COPY . .
 
 WORKDIR /var/www
 
