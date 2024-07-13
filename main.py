@@ -56,10 +56,10 @@ def predict_image(img):
 app = FastAPI()
 
 
-@app.get("/" , response_class= HTMLResponse)
-async def root():
+#@app.get("/" , response_class= HTMLResponse)
+#async def root():
 
-    return "Hello! Go to /predicting/ for predict an image"
+ #   return "Hello! Go to /predicting/ for predict an image"
 
 
 @app.post("/")
