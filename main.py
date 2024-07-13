@@ -62,7 +62,18 @@ async def root():
     return "Hello! Go to /predicting/ for predict an image"
 
 
-
+@app.post("/")
+async def predicting(file: UploadFile = File(...)):
+    # خواندن فایل تصویری بارگذاری‌شده
+    contents = await file.read()
+    # پردازش تصویر
+    img_array = predict_image(contents)
+    # انجام پیش‌بینی
+    predictions = model.predict(img_array)
+    score = np.argmax(predictions[0])
+    # دریافت برچسب
+    predicted_label = class_names[score]
+    return {"label": predicted_label}
 
 
 @app.post("/predicting/")
