@@ -16,7 +16,7 @@ import io
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-
+app = FastAPI()
 router = APIRouter()
 
 # نام کلاس‌ها برای مجموعه داده CIFAR-10
